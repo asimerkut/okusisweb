@@ -44,7 +44,7 @@
                 </td>
                 <td>
                     <div *ngIf="okuSefer.arac">
-                        <a [routerLink]="['../oku-arac', okuSefer.arac?.id ]" >{{okuSefer.arac?.id}}</a>
+                        <a [routerLink]="['../oku-arac', okuSefer.arac?.id ]" >{{okuSefer.arac?.kod+':'+okuSefer.arac?.plaka}}</a>
                     </div>
                 </td>
                 <td class="text-right">
