@@ -1,0 +1,88 @@
+enum SehirTip {
+    IL, ILCE, BELDE, KOY, MAHALLE, MEZRA
+}
+
+enum SeferTip {
+    SABAH, AKSAM
+}
+
+entity Sehir{
+	kod String,
+    isim String,
+    tip SehirTip
+}
+
+entity Okul {
+	kod String,
+    isim String,
+    mudur_ad String,
+    mudur_tel String
+}
+
+entity Ogrenci{
+	no String,
+    isim String,
+    tc String,
+    aile_isim String,
+    aile_tel String
+}
+
+entity Guzergah{
+	kod String,
+    rota String
+    harita String
+}
+
+entity Sofor{
+	kod String,
+    isim String,
+    tel String
+}
+
+entity Arac{
+	kod String,
+    plaka String,
+    marka String,
+    renk String
+}
+
+entity Sefer{
+	tarih LocalDate,
+    tip SeferTip,
+    yapildiMi Boolean
+}
+
+relationship ManyToOne {
+	Okul{sehir} to Sehir
+}
+
+relationship ManyToOne {
+	Ogrenci{okul} to Okul
+}
+
+
+relationship ManyToOne {
+	Sehir{parent} to Sehir
+}
+
+relationship ManyToOne {
+	Guzergah{okul} to Okul
+}
+
+relationship ManyToOne {
+	Sefer{guzergah} to Guzergah,
+    Sefer{sofor} to Sofor,
+    Sefer{arac} to Arac
+}
+
+relationship ManyToOne {
+	Ogrenci{guzergah} to Guzergah
+}
+
+relationship ManyToOne {
+	Ogrenci{sefer} to Sefer
+}
+
+dto * with mapstruct
+service all with serviceImpl
+angularSuffix * with tay
