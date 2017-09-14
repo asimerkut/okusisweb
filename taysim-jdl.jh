@@ -1,88 +1,85 @@
-enum SehirTip {
-    IL, ILCE, BELDE, KOY, MAHALLE, MEZRA
+enum OkuServis {
+    SABAH, AKSAM, DIGER
 }
 
-enum SeferTip {
-    SABAH, AKSAM
+entity OkuSehir{
+	kod String,
+    isim String
 }
 
-entity Sehir{
+entity OkuOkul {
 	kod String,
     isim String,
-    tip SehirTip
+    mudurIsim String,
+    mudurTel String
 }
 
-entity Okul {
-	kod String,
-    isim String,
-    mudur_ad String,
-    mudur_tel String
-}
-
-entity Ogrenci{
+entity OkuOgrenci{
 	no String,
     isim String,
     tc String,
-    aile_isim String,
-    aile_tel String
+    aileIsim String,
+    aileTel String
 }
 
-entity Guzergah{
+entity OkuYolcu{
+	bindiMi Boolean,
+    ulastiMi Boolean
+}
+
+entity OkuGuzergah{
 	kod String,
     rota String
     harita String
 }
 
-entity Sofor{
+entity OkuSofor{
 	kod String,
     isim String,
     tel String
 }
 
-entity Arac{
+entity OkuArac{
 	kod String,
     plaka String,
     marka String,
     renk String
 }
 
-entity Sefer{
+entity OkuSefer{
 	tarih LocalDate,
-    tip SeferTip,
+    servis OkuServis,
     yapildiMi Boolean
 }
 
 relationship ManyToOne {
-	Okul{sehir} to Sehir
+	OkuOkul{sehir} to OkuSehir
 }
 
 relationship ManyToOne {
-	Ogrenci{okul} to Okul
+	OkuOgrenci{okul} to OkuOkul,
+	OkuOgrenci{guzergah} to OkuGuzergah
 }
 
 
 relationship ManyToOne {
-	Sehir{parent} to Sehir
+	OkuSehir{parent} to OkuSehir
 }
 
 relationship ManyToOne {
-	Guzergah{okul} to Okul
+	OkuGuzergah{okul} to OkuOkul
 }
 
 relationship ManyToOne {
-	Sefer{guzergah} to Guzergah,
-    Sefer{sofor} to Sofor,
-    Sefer{arac} to Arac
+	OkuSefer{guzergah} to OkuGuzergah,
+    OkuSefer{sofor} to OkuSofor,
+    OkuSefer{arac} to OkuArac
 }
 
 relationship ManyToOne {
-	Ogrenci{guzergah} to Guzergah
+	OkuYolcu{sefer} to OkuSefer,
+	OkuYolcu{ogrenci} to OkuOgrenci
 }
 
-relationship ManyToOne {
-	Ogrenci{sefer} to Sefer
-}
 
-dto * with mapstruct
 service all with serviceImpl
-angularSuffix * with tay

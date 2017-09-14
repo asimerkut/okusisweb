@@ -1,0 +1,25 @@
+{
+    "okusiswebApp": {
+        "okuOkul" : {
+            "home": {
+                "title": "Oku Okuls",
+                "createLabel": "Create a new Oku Okul",
+                "createOrEditLabel": "Create or edit a Oku Okul"
+            },
+            "created": "A new Oku Okul is created with identifier {{ param }}",
+            "updated": "A Oku Okul is updated with identifier {{ param }}",
+            "deleted": "A Oku Okul is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Oku Okul {{ id }}?"
+            },
+            "detail": {
+                "title": "Oku Okul"
+            },
+            "kod": "Kod",
+            "isim": "Isim",
+            "mudurIsim": "Mudur Isim",
+            "mudurTel": "Mudur Tel",
+            "sehir": "Sehir"
+        }
+    }
+}

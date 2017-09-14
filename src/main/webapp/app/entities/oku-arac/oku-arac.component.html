@@ -1,0 +1,62 @@
+<div>
+    <h2>
+        <span jhiTranslate="okusiswebApp.okuArac.home.title">Oku Aracs</span>
+        <button class="btn btn-primary float-right jh-create-entity create-oku-arac" [routerLink]="['/', { outlets: { popup: ['oku-arac-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="okusiswebApp.okuArac.home.createLabel">
+            Create new Oku Arac
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="okuAracs">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="okusiswebApp.okuArac.kod">Kod</span></th>
+            <th><span jhiTranslate="okusiswebApp.okuArac.plaka">Plaka</span></th>
+            <th><span jhiTranslate="okusiswebApp.okuArac.marka">Marka</span></th>
+            <th><span jhiTranslate="okusiswebApp.okuArac.renk">Renk</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let okuArac of okuAracs ;trackBy: trackId">
+                <td><a [routerLink]="['../oku-arac', okuArac.id ]">{{okuArac.id}}</a></td>
+                <td>{{okuArac.kod}}</td>
+                <td>{{okuArac.plaka}}</td>
+                <td>{{okuArac.marka}}</td>
+                <td>{{okuArac.renk}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../oku-arac', okuArac.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'oku-arac/'+ okuArac.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'oku-arac/'+ okuArac.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

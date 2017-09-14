@@ -1,0 +1,23 @@
+{
+    "okusiswebApp": {
+        "okuSehir" : {
+            "home": {
+                "title": "Oku Sehirs",
+                "createLabel": "Create a new Oku Sehir",
+                "createOrEditLabel": "Create or edit a Oku Sehir"
+            },
+            "created": "A new Oku Sehir is created with identifier {{ param }}",
+            "updated": "A Oku Sehir is updated with identifier {{ param }}",
+            "deleted": "A Oku Sehir is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Oku Sehir {{ id }}?"
+            },
+            "detail": {
+                "title": "Oku Sehir"
+            },
+            "kod": "Kod",
+            "isim": "Isim",
+            "parent": "Parent"
+        }
+    }
+}
