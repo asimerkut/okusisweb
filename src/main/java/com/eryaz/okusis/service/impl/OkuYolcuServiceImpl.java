@@ -5,6 +5,7 @@ import com.eryaz.okusis.domain.OkuYolcu;
 import com.eryaz.okusis.repository.OkuYolcuRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -45,7 +46,7 @@ public class OkuYolcuServiceImpl implements OkuYolcuService{
     @Transactional(readOnly = true)
     public List<OkuYolcu> findAll() {
         log.debug("Request to get all OkuYolcus");
-        return okuYolcuRepository.findAll();
+        return okuYolcuRepository.findAll(new Sort("id"));
     }
 
     /**
