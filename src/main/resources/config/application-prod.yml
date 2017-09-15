@@ -21,8 +21,8 @@ spring:
             enabled: false
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://localhost:5432/okusisweb
-        username: okusisweb
+        url: jdbc:postgresql://localhost:5432/okusis
+        username: okusis
         password:
     jpa:
         database-platform: io.github.jhipster.domain.util.FixedPostgreSQL82Dialect
@@ -46,7 +46,7 @@ liquibase:
 
 # ===================================================================
 # To enable SSL, generate a certificate using:
-# keytool -genkey -alias okusisweb -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+# keytool -genkey -alias okusis -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
 #
 # You can also use Let's Encrypt:
 # https://maximilian-boehm.com/hp2121/Create-a-Java-Keystore-JKS-from-Let-s-Encrypt-Certificates.htm
@@ -59,7 +59,7 @@ liquibase:
 #        key-store: keystore.p12
 #        key-store-password: <your-password>
 #        keyStoreType: PKCS12
-#        keyAlias: okusisweb
+#        keyAlias: okusis
 # ===================================================================
 server:
     port: 8080
@@ -82,12 +82,12 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 045c3d0cd85802feec37db99f3baf0d5041cb106
+                secret: 7371f456c154b2f434b34402d61b2fa891ba4186
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
                 token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: okusisweb@localhost
+        from: okusis@localhost
         base-url: http://my-server-url-to-change # Modify according to your server's URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
@@ -95,7 +95,7 @@ jhipster:
             enabled: false
             host: localhost
             port: 2003
-            prefix: okusisweb
+            prefix: okusis
         prometheus:
             enabled: false
             endpoint: /prometheusMetrics

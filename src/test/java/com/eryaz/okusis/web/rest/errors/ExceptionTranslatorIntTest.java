@@ -1,6 +1,6 @@
 package com.eryaz.okusis.web.rest.errors;
 
-import com.eryaz.okusis.OkusiswebApp;
+import com.eryaz.okusis.OkusisApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = OkusiswebApp.class)
+@SpringBootTest(classes = OkusisApp.class)
 public class ExceptionTranslatorIntTest {
 
     @Autowired

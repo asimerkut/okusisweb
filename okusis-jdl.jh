@@ -81,5 +81,5 @@ relationship ManyToOne {
 	OkuYolcu{ogrenci} to OkuOgrenci
 }
 
-
 service all with serviceImpl
+paginate all with pagination

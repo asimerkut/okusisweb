@@ -1,6 +1,6 @@
 package com.eryaz.okusis.web.rest;
 
-import com.eryaz.okusis.OkusiswebApp;
+import com.eryaz.okusis.OkusisApp;
 import com.eryaz.okusis.config.audit.AuditEventConverter;
 import com.eryaz.okusis.domain.PersistentAuditEvent;
 import com.eryaz.okusis.repository.PersistenceAuditEventRepository;
@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AuditResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = OkusiswebApp.class)
+@SpringBootTest(classes = OkusisApp.class)
 @Transactional
 public class AuditResourceIntTest {
 

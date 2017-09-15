@@ -16,14 +16,14 @@
 
 spring:
     application:
-        name: okusisweb
+        name: okusis
     jackson:
         serialization.write_dates_as_timestamps: false
     cache:
         type: none
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:okusisweb;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:okusis;DB_CLOSE_DELAY=-1
         name:
         username:
         password:
@@ -92,7 +92,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 045c3d0cd85802feec37db99f3baf0d5041cb106
+                secret: 7371f456c154b2f434b34402d61b2fa891ba4186
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration

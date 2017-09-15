@@ -1,6 +1,6 @@
 package com.eryaz.okusis.web.rest;
 
-import com.eryaz.okusis.OkusiswebApp;
+import com.eryaz.okusis.OkusisApp;
 import com.eryaz.okusis.domain.Authority;
 import com.eryaz.okusis.domain.User;
 import com.eryaz.okusis.repository.AuthorityRepository;
@@ -48,7 +48,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see AccountResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = OkusiswebApp.class)
+@SpringBootTest(classes = OkusisApp.class)
 public class AccountResourceIntTest {
 
     @Autowired

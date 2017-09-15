@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Ng2Webstorage } from 'ng2-webstorage';
 
-import { OkusiswebSharedModule, UserRouteAccessService } from './shared';
-import { OkusiswebHomeModule } from './home/home.module';
-import { OkusiswebAdminModule } from './admin/admin.module';
-import { OkusiswebAccountModule } from './account/account.module';
-import { OkusiswebEntityModule } from './entities/entity.module';
+import { OkusisSharedModule, UserRouteAccessService } from './shared';
+import { OkusisHomeModule } from './home/home.module';
+import { OkusisAdminModule } from './admin/admin.module';
+import { OkusisAccountModule } from './account/account.module';
+import { OkusisEntityModule } from './entities/entity.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -31,11 +31,11 @@ import {
         BrowserModule,
         LayoutRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
-        OkusiswebSharedModule,
-        OkusiswebHomeModule,
-        OkusiswebAdminModule,
-        OkusiswebAccountModule,
-        OkusiswebEntityModule,
+        OkusisSharedModule,
+        OkusisHomeModule,
+        OkusisAdminModule,
+        OkusisAccountModule,
+        OkusisEntityModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [
@@ -54,4 +54,4 @@ import {
     ],
     bootstrap: [ JhiMainComponent ]
 })
-export class OkusiswebAppModule {}
+export class OkusisAppModule {}

@@ -1,5 +1,5 @@
-var dataCacheName = 'Okusisweb-v1';
-var cacheName = 'Okusisweb-1';
+var dataCacheName = 'Okusis-v1';
+var cacheName = 'Okusis-1';
 var filesToCache = [
     '/',
     '/index.html'

@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.eryaz.okusis</groupId>
-    <artifactId>okusisweb</artifactId>
+    <artifactId>okusis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Okusisweb</name>
+    <name>Okusis</name>
 
     <properties>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
@@ -505,9 +505,9 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://localhost:5432/okusisweb</url>
+                    <url>jdbc:postgresql://localhost:5432/okusis</url>
                     <defaultSchemaName></defaultSchemaName>
-                    <username>okusisweb</username>
+                    <username>okusis</username>
                     <password></password>
                     <referenceUrl>hibernate:spring:com.eryaz.okusis.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>
                     <verbose>true</verbose>

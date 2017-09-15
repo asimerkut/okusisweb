@@ -1,6 +1,6 @@
 package com.eryaz.okusis.repository;
 
-import com.eryaz.okusis.OkusiswebApp;
+import com.eryaz.okusis.OkusisApp;
 import com.eryaz.okusis.config.Constants;
 import com.eryaz.okusis.config.audit.AuditEventConverter;
 import com.eryaz.okusis.domain.PersistentAuditEvent;
@@ -31,7 +31,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @see CustomAuditEventRepository
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = OkusiswebApp.class)
+@SpringBootTest(classes = OkusisApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIntTest {
 

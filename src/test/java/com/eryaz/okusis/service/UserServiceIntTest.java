@@ -1,6 +1,6 @@
 package com.eryaz.okusis.service;
 
-import com.eryaz.okusis.OkusiswebApp;
+import com.eryaz.okusis.OkusisApp;
 import com.eryaz.okusis.domain.User;
 import com.eryaz.okusis.config.Constants;
 import com.eryaz.okusis.repository.UserRepository;
@@ -29,7 +29,7 @@ import static org.assertj.core.api.Assertions.*;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = OkusiswebApp.class)
+@SpringBootTest(classes = OkusisApp.class)
 @Transactional
 public class UserServiceIntTest {
 

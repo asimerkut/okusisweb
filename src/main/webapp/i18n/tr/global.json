@@ -1,20 +1,12 @@
 {
     "global": {
-        "title": "Okusisweb",
+        "title": "Okusis",
         "browsehappy": "<strong>Çok eski</strong> bir tarayıcı kullanıyorsunuz. Lütfen kullanım kalitenizi arttırmak için <a href=\"http://browsehappy.com/?locale=tr\">tarayıcınızı yükseltin</a>.",
         "menu": {
             "home": "Ana Sayfa",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Varlıklar",
-                "okuSehir": "Oku Sehir",
-                "okuOkul": "Oku Okul",
-                "okuOgrenci": "Oku Ogrenci",
-                "okuYolcu": "Oku Yolcu",
-                "okuGuzergah": "Oku Guzergah",
-                "okuSofor": "Oku Sofor",
-                "okuArac": "Oku Arac",
-                "okuSefer": "Oku Sefer",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

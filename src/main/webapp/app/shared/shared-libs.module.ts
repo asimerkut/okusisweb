@@ -28,4 +28,4 @@ import { CookieModule } from 'ngx-cookie';
         InfiniteScrollModule
     ]
 })
-export class OkusiswebSharedLibsModule {}
+export class OkusisSharedLibsModule {}

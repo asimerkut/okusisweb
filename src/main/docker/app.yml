@@ -1,14 +1,14 @@
 version: '2'
 services:
-    okusisweb-app:
-        image: okusisweb
+    okusis-app:
+        image: okusis
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_DATASOURCE_URL=jdbc:postgresql://okusisweb-postgresql:5432/okusisweb
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://okusis-postgresql:5432/okusis
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
         ports:
             - 8080:8080
-    okusisweb-postgresql:
+    okusis-postgresql:
         extends:
             file: postgresql.yml
-            service: okusisweb-postgresql
+            service: okusis-postgresql
