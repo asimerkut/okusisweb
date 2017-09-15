@@ -1,0 +1,2 @@
+sudo apt-get install docker-compose
+sudo docker-compose -f src/main/docker/postgresql.yml up
