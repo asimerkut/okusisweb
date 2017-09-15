@@ -1,0 +1,37 @@
+
+<div *ngIf="okuArac">
+    <h2><span jhiTranslate="okusisApp.okuArac.detail.title">Oku Arac</span> {{okuArac.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="okusisApp.okuArac.kod">Kod</span></dt>
+        <dd>
+            <span>{{okuArac.kod}}</span>
+        </dd>
+        <dt><span jhiTranslate="okusisApp.okuArac.plaka">Plaka</span></dt>
+        <dd>
+            <span>{{okuArac.plaka}}</span>
+        </dd>
+        <dt><span jhiTranslate="okusisApp.okuArac.marka">Marka</span></dt>
+        <dd>
+            <span>{{okuArac.marka}}</span>
+        </dd>
+        <dt><span jhiTranslate="okusisApp.okuArac.renk">Renk</span></dt>
+        <dd>
+            <span>{{okuArac.renk}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'oku-arac/'+ okuArac.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

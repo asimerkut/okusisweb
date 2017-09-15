@@ -1,0 +1,27 @@
+{
+    "okusisApp": {
+        "okuOgrenci" : {
+            "home": {
+                "title": "Oku Ogrencis",
+                "createLabel": "Create a new Oku Ogrenci",
+                "createOrEditLabel": "Create or edit a Oku Ogrenci"
+            },
+            "created": "A new Oku Ogrenci is created with identifier {{ param }}",
+            "updated": "A Oku Ogrenci is updated with identifier {{ param }}",
+            "deleted": "A Oku Ogrenci is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Oku Ogrenci {{ id }}?"
+            },
+            "detail": {
+                "title": "Oku Ogrenci"
+            },
+            "no": "No",
+            "isim": "Isim",
+            "tc": "Tc",
+            "aileIsim": "Aile Isim",
+            "aileTel": "Aile Tel",
+            "okul": "Okul",
+            "guzergah": "Guzergah"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "okusisApp": {
+        "okuArac" : {
+            "home": {
+                "title": "Oku Aracs",
+                "createLabel": "Create a new Oku Arac",
+                "createOrEditLabel": "Create or edit a Oku Arac"
+            },
+            "created": "A new Oku Arac is created with identifier {{ param }}",
+            "updated": "A Oku Arac is updated with identifier {{ param }}",
+            "deleted": "A Oku Arac is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Oku Arac {{ id }}?"
+            },
+            "detail": {
+                "title": "Oku Arac"
+            },
+            "kod": "Kod",
+            "plaka": "Plaka",
+            "marka": "Marka",
+            "renk": "Renk"
+        }
+    }
+}

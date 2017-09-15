@@ -1,0 +1,10 @@
+{
+    "okusisApp": {
+        "OkuServis" : {
+            "null": "",
+            "SABAH": "SABAH",
+            "AKSAM": "AKSAM",
+            "DIGER": "DIGER"
+        }
+    }
+}

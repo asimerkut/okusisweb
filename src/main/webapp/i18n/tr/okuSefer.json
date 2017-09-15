@@ -1,0 +1,26 @@
+{
+    "okusisApp": {
+        "okuSefer" : {
+            "home": {
+                "title": "Oku Sefers",
+                "createLabel": "Create a new Oku Sefer",
+                "createOrEditLabel": "Create or edit a Oku Sefer"
+            },
+            "created": "A new Oku Sefer is created with identifier {{ param }}",
+            "updated": "A Oku Sefer is updated with identifier {{ param }}",
+            "deleted": "A Oku Sefer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Oku Sefer {{ id }}?"
+            },
+            "detail": {
+                "title": "Oku Sefer"
+            },
+            "tarih": "Tarih",
+            "servis": "Servis",
+            "yapildiMi": "Yapildi Mi",
+            "guzergah": "Guzergah",
+            "sofor": "Sofor",
+            "arac": "Arac"
+        }
+    }
+}

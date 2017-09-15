@@ -1,0 +1,76 @@
+<div>
+    <h2>
+        <span jhiTranslate="okusisApp.okuOkul.home.title">Oku Okuls</span>
+        <button class="btn btn-primary float-right jh-create-entity create-oku-okul" [routerLink]="['/', { outlets: { popup: ['oku-okul-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="okusisApp.okuOkul.home.createLabel">
+            Create new Oku Okul
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="okuOkuls">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="kod"><span jhiTranslate="okusisApp.okuOkul.kod">Kod</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="isim"><span jhiTranslate="okusisApp.okuOkul.isim">Isim</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="mudurIsim"><span jhiTranslate="okusisApp.okuOkul.mudurIsim">Mudur Isim</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="mudurTel"><span jhiTranslate="okusisApp.okuOkul.mudurTel">Mudur Tel</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="sehir.id"><span jhiTranslate="okusisApp.okuOkul.sehir">Sehir</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let okuOkul of okuOkuls ;trackBy: trackId">
+                <td><a [routerLink]="['../oku-okul', okuOkul.id ]">{{okuOkul.id}}</a></td>
+                <td>{{okuOkul.kod}}</td>
+                <td>{{okuOkul.isim}}</td>
+                <td>{{okuOkul.mudurIsim}}</td>
+                <td>{{okuOkul.mudurTel}}</td>
+                <td>
+                    <div *ngIf="okuOkul.sehir">
+                        <a [routerLink]="['../oku-sehir', okuOkul.sehir?.id ]" >{{okuOkul.sehir?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../oku-okul', okuOkul.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'oku-okul/'+ okuOkul.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'oku-okul/'+ okuOkul.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="hidden-md-down" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        <div *ngIf="okuOkuls && okuOkuls.length">
+            <div class="row justify-content-center">
+                <jhi-item-count [page]="page" [total]="queryCount" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+            </div>
+            <div class="row justify-content-center">
+                <ngb-pagination [collectionSize]="totalItems" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination>
+            </div>
+        </div>
+</div>
